@@ -1,8 +1,16 @@
 
-    # ReadMe generator 
+    # ReadME Generator
+
     
+![Badge](https://img.shields.io/badge/project-ReadME Generator-green)
+    A command-line application that dynamically generates a README.md from a user's input. The application will be invoked with the following command:
+
+    '''sh
+    node index.js
+    '''
+
     ## Description
-      User is prompt for Github id and description of project
+      A command-line application that dynamically generates a README.md from a user's input
   
     ## Table of Contents
     - [Installation](#installation)
@@ -13,16 +21,18 @@
     - [Questions](#Questions)
   
     ## Installation
-    Packages required to run this program are: fs inquirier
+    Packages required to run this program are: npm i
     
     ## Usage
-    Examples of how to use this program: automated readme file
+    Examples of how to use this program: auto generate readme
   
+    ![Image Alt Text](/assets/video.gif)
+
     ## License
     MIT
     
     ## Contributors
-    Mike
+    Mike Lee
   
     ## Tests
     To test, run the following command: node index.js
@@ -30,10 +40,12 @@
   
     ## Contact
     
-![Badge](https://img.shields.io/badge/Github-undefined-green) 
+![Badge](https://img.shields.io/badge/Github-mikewclee-green) 
     
-![Profile Image](https://github.com/undefined.png?size=50)
+![GitHub profile](https://github.com/mikewclee)
     
-View the project in GitHub at: mikewlee
+![Profile Image](https://github.com/mikewclee.png?size=150)
     
-If you have any questions, contact the author directly at mikewclee@gmail.com.
+!Deployed site on GitHub: https://github.com/mikewclee/README-Generator
+    
+!Contact email: mikewclee@gmail.com.

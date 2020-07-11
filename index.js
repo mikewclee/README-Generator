@@ -3,7 +3,7 @@ const inquirer = require("inquirer");
 const util = require("util");
 const { async } = require("rxjs/internal/scheduler/async");
 
-const writeFileAsync = util.promisify(fs.writeFile);
+// const writeFileAsync = util.promisify(fs.writeFile);
 
 function promptUser() {
     return inquirer.prompt([
@@ -68,12 +68,18 @@ function promptUser() {
 };
 
 function generateReadME(data) {
-    const profilePic = `https://github.com/${data.username}.png?size=50`;
-    const gitHub = `https://img.shields.io/badge/Github-${data.username}-green`;
-  
+    const gitHub = `https://img.shields.io/badge/Github-${data.github}-green`;
+
     return `
-    # ${data.title} 
-    
+    # ${data.title}
+
+    \n![Badge](https://img.shields.io/badge/project-${data.title}-green)
+    A command-line application that dynamically generates a README.md from a user's input. The application will be invoked with the following command:
+
+    '''sh
+    node index.js
+    '''
+
     ## Description
       ${data.description}
   
@@ -91,6 +97,8 @@ function generateReadME(data) {
     ## Usage
     Examples of how to use this program: ${data.usage}
   
+    ![Image Alt Text](/assets/video.gif)
+
     ## License
     ${data.license}
     
@@ -103,36 +111,32 @@ function generateReadME(data) {
   
     ## Contact
     \n![Badge](${gitHub}) 
-    \n![Profile Image](${profilePic})
-    \nView the project in GitHub at: ${data.url}
-    \nIf you have any questions, contact the author directly at ${data.email}.`
-     
-  }
+    \n![GitHub profile](https://github.com/${data.github})
+    \n![Profile Image](https://github.com/${data.github}.png?size=150)
+    \n!Deployed site on GitHub: ${data.url}
+    \n!Contact email: ${data.email}.`
+
+}
 
 // write the answers to a new README file
 function writetoFile(fileName, data) {
-    // const writetoFile = (filename, data) => {
     fs.writeFile(fileName, data, "utf8", function (err) {
-      if (err) {
-        throw err;
-      }
-      console.log("You have successfully written your README file");
+        if (err) {
+            throw err;
+        }
+        console.log("Successfully created README file");
     });
-  };
-  
-  // write the answers to a new README file
-  
-  async function init() {
-    // let init = async() => {
+};
+
+let init = async () => {
     try {
-      const userResponse = await promptUser();
-      generateReadME(userResponse);
-      writetoFile("README.md", generateReadME(userResponse));
-  
-      } catch (err) {
+        const userResponse = await promptUser();
+        generateReadME(userResponse);
+        writetoFile("README.md", generateReadME(userResponse));
+
+    } catch (err) {
         console.log(err);
-      }
-  };
-  
-  init();
-  
+    }
+};
+
+init();
