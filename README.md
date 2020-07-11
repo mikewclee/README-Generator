@@ -1,16 +1,16 @@
 
-  # ReadME Generator
+  # ReadMEGenerator
 
-  ![Badge](https://img.shields.io/badge/project-ReadME Generator-green)
+  ![Badge](https://img.shields.io/badge/project-ReadMEGenerator-green)
       
-  A command-line application that dynamically generates a README.md from a user's input. The application will be invoked with the following command:
+  A command-line application that dynamically generates a README.md from user's input. The application will be invoked with the following command:
 
-  '''
+  ```
   node index.js
-  '''
+  ```
 
   ## Description
-    The project is to auto create README file with information about the app--what is the app for, how to use the app, how to install it, how to report issues, and how to make contributions so that other developers are more likely to use and contribute to the success of the project. A command-line application will allow for quick and easy generation of a project README to get started quickly.
+    The project auto generates a README file with information about the app--what is the app for, how to use the app, how to install it, how to report issues, etc. A command-line application will allow for quick and easy generation of a project README to get started quickly.
 
   ## Table of Contents
   - [Installation](#installation)
@@ -21,12 +21,12 @@
   - [Questions](#Questions)
 
   ## Installation
-  Packages required to run this program are: inquirer fs
+  Packages required to run this program are: npm i
 
   ## Usage
-  Examples of how to use this program: Project can be used when developers created a repository on Github and would like to auto generate a ReadME file
+ App can be used when developers created a repository on Github and would like to quickly generate a quality ReadME file.
 
-  ![Image Alt Text](/assets/video.webm)
+  ![Image Alt Text](/assets/video.gif)
 
   ## License
   MIT
@@ -35,14 +35,14 @@
   Mike Lee
 
   ## Tests
-  To test, run the following command: node index.js
+  To test, run the following command: N/A
 
 
   ## Contact
   
 ![Badge](https://img.shields.io/badge/Github-mikewclee-green) 
   
-![GitHub profile](https://github.com/mikewclee)
+GitHub Username: (https://github.com/mikewclee)
   
 ![Profile Image](https://github.com/mikewclee.png?size=150)
   
