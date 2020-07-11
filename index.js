@@ -73,7 +73,8 @@ function generateReadME(data) {
     return `
     # ${data.title}
 
-    \n![Badge](https://img.shields.io/badge/project-${data.title}-green)
+    ![Badge](https://img.shields.io/badge/project-${data.title}-green)
+    
     A command-line application that dynamically generates a README.md from a user's input. The application will be invoked with the following command:
 
     '''sh
@@ -113,8 +114,8 @@ function generateReadME(data) {
     \n![Badge](${gitHub}) 
     \n![GitHub profile](https://github.com/${data.github})
     \n![Profile Image](https://github.com/${data.github}.png?size=150)
-    \n!Deployed site on GitHub: ${data.url}
-    \n!Contact email: ${data.email}.`
+    \nGitHub Project link: ${data.url}
+    \nContact email: ${data.email}.`
 
 }
 
