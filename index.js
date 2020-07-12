@@ -1,11 +1,11 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
-const axios = require ("axios");
+const axios = require("axios");
 const util = require("util");
 const generateMarkdown = require("./utils/generateMarkdown");
 const { async } = require("rxjs/internal/scheduler/async");
 
-// const writeFileAsync = util.promisify(fs.writeFile);
+const writeFileAsync = util.promisify(fs.writeFile);
 
 function promptUser() {
     return inquirer.prompt([
@@ -69,21 +69,22 @@ function promptUser() {
     ]);
 };
 
-// write the answers to a new README file
-function writetoFile(fileName, data) {
-    fs.writeFile(fileName, data, "utf8", function (err) {
-        if (err) {
-            throw err;
-        }
-        console.log("Successfully created README file");
-    });
-};
+// // write the answers to a new README file
+// function writetoFile(fileName, data) {
+//     fs.writeFile(fileName, data, "utf8", function (err) {
+//         if (err) {
+//             throw err;
+//         }
+//         console.log("Successfully created README file");
+//     });
+// };
 
-let init = async () => {
+async function init() {
     try {
         const userResponse = await promptUser();
-        generateMarkdown(userResponse);
-        writetoFile("README.md", generateMarkdown(userResponse));
+        // generateMarkdown(userResponse);
+        await writeFileAsync("README.md", generateMarkdown(userResponse));
+        console.log("Successfully created README file");
 
     } catch (err) {
         console.log(err);
