@@ -69,20 +69,9 @@ function promptUser() {
     ]);
 };
 
-// // write the answers to a new README file
-// function writetoFile(fileName, data) {
-//     fs.writeFile(fileName, data, "utf8", function (err) {
-//         if (err) {
-//             throw err;
-//         }
-//         console.log("Successfully created README file");
-//     });
-// };
-
 async function init() {
     try {
         const userResponse = await promptUser();
-        // generateMarkdown(userResponse);
         await writeFileAsync("README.md", generateMarkdown(userResponse));
         console.log("Successfully created README file");
 
