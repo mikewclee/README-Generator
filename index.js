@@ -7,7 +7,8 @@ const { async } = require("rxjs/internal/scheduler/async");
 
 const writeFileAsync = util.promisify(fs.writeFile);
 
-function promptUser() {
+// function promptUser() {
+    let promptUser = () => {
     return inquirer.prompt([
         {
             type: "input",

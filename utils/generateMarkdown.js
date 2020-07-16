@@ -4,15 +4,12 @@ function generateMarkdown(data) {
   # ${data.title}
 
   ![Badge](https://img.shields.io/badge/project-${data.title}-green)
-      
-  A command-line application that dynamically generates a README.md from user's input. The application will be invoked with the following command:
-
-  '''
-  node index.js
-  '''
+  ![Badge](https://img.shields.io/badge/Github-${data.installation}-blue) 
 
   ## Description
-    ${data.description}
+  ${data.description}
+
+  ![Image Alt Text](/assets/video.gif)
 
   ## Table of Contents
   - [Installation](#installation)
@@ -28,8 +25,6 @@ function generateMarkdown(data) {
   ## Usage
   ${data.usage}
 
-  ![Image Alt Text](/assets/video.gif)
-
   ## License
   ${data.license}
 
@@ -37,7 +32,7 @@ function generateMarkdown(data) {
   ${data.contributer}
 
   ## Tests
-  To test, run the following command: ${data.tests}
+  ${data.tests}
 
 
   ## Contact
