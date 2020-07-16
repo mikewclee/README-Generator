@@ -27,10 +27,10 @@
   MIT
 
   ## Contributors
-  Mike Lee
+  Mike
 
   ## Tests
-  Not Applicable
+  not applicable
 
 
   ## Contact
